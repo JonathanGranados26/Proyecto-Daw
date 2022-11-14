@@ -1,0 +1,78 @@
+body{
+    background-color: #7CA5F9;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%237CA5F9' cx='50' cy='0' r='50'/%3E%3Cg fill='%2384a9f9' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%238badf9' cx='50' cy='100' r='50'/%3E%3Cg fill='%2393b1f9' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%239ab5fa' cx='50' cy='200' r='50'/%3E%3Cg fill='%23a0b9fa' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23a7befa' cx='50' cy='300' r='50'/%3E%3Cg fill='%23adc2fa' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23b4c6fa' cx='50' cy='400' r='50'/%3E%3Cg fill='%23bacafa' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23c0cefa' cx='50' cy='500' r='50'/%3E%3Cg fill='%23c6d3fa' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23ccd7fa' cx='50' cy='600' r='50'/%3E%3Cg fill='%23d2dbfa' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23d8e0fa' cx='50' cy='700' r='50'/%3E%3Cg fill='%23dee4fa' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23e4e8fa' cx='50' cy='800' r='50'/%3E%3Cg fill='%23e9edfa' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23eff1fa' cx='50' cy='900' r='50'/%3E%3Cg fill='%23f4f6fa' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23FAFAFA' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: contain;
+
+/* background by SVGBackgrounds.com */
+}
+#titulo{background-color: #7CA5F9;}
+#titulo h1 {
+    color: #ffffff;
+    text-shadow: 10px 5px #3B7CCF;
+}
+#parteImg{background-color: #130D35;}
+#contenido{background-color: #0C0B53;}
+#contenido p{
+    font-family: fantasy;
+    font-size: 15px;
+    color: #fcfcfc;
+    text-align:left;
+}
+
+
+p{text-align: justify;}
+/* From uiverse.io by @alexroumi */
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #212121;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms
+}
+
+button:hover {
+    color: #e8e8e8;
+}
+
+button:hover::before {
+    width: 100%;
+}
+
+img{
+    max-width: 40%;
+    max-height: 40%;  
+}
+
+.imag1{
+    height: 200px;
+    width: 200px;  
+}
+
+.imag2{
+    height: 100px;
+    width: 100px;  
+}

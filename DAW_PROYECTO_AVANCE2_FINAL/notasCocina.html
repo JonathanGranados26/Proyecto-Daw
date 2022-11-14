@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de cocina</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/notasCocina.css">
+</head>
+<br>
+    <!--Menu principal-->
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <div><button class="primary-button" onclick="nuevoApunte()">Nuevo apunte</button></div>
+                </li>
+                <li class="nav-item">
+                    <div><button class="primary-button" onclick="misNotas()">Mis notas</button></div>
+                </li>
+                <li class="nav-item">
+                    <div><button class="primary-button" onclick="listaCompras()">Lista de compras</button></div>
+                </li>
+                <li class="nav-item">
+                    <div><button class="primary-button" onclick="notasCocina()">Notas de cocina</button></div>
+                </li>
+                <li class="nav-item">
+                    <div><button class="primary-button" onclick="cerrar()">Cerrar</button></div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+<br>
+
+<!--parte del titulo y boton para agregar-->
+<div id="contenido" class="container px-4 text-center">
+    <div class="row gx-5">
+        <div class="col">
+            <div class="p-3">
+                <h1>Notas de cocina</h1>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-lg-5 p-md-5">
+                <button id="btnAbrir"> Agregar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<!--tabla para agregar la informacion-->
+<div id="agregarNota">
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="bg-white p-4 rounded-4 text-secondary shadow" style="width: 55rem">
+
+            <div class="mb-3 row">
+                <div class="input-group">
+                    <span class="input-group-text">Nombre de la receta</span>
+                    <input type="text" class="form-control" id="txtTitulo">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="input-group">
+                        <span class="input-group-text">Tiempo (minutos-segundos)</span>
+                        <input type="number" class="form-control" id="txtTiempo">
+                    </div>
+                </div>
+                <div class="col">
+                    <select class="form-select" aria-label="Default select example" id="seleciondif">
+                        <option selected>Seleccione la dificultad</option>
+                        <option value="Facil">Facil</option>
+                        <option value="Normal">Normal</option>
+                        <option value="Intermedio">Intermedio</option>
+                        <option value="Dificil">Dificil</option>
+                    </select>
+                </div>
+            </div>
+<br>
+            <div class="row">
+                <div class="mb-3 col">
+                    <label for="txtIngredientes" class="form-label">Ingredientes</label>
+                    <textarea class="form-control" id="txtIngredientes" rows="3"></textarea>
+                </div>
+                <div class="mb-3 col">
+                    <label for="exampleFormControlTextarea1" class="form-label">Procedimiento</label>
+                    <textarea class="form-control" id="txtProceso" rows="3"></textarea>
+                </div>
+            </div>
+
+            <div class="container px-4 text-center">
+                <div class="row gx-5">
+                    <div class="col">
+                        <div class="p-3">
+                            <button id="btnAgregar"> Agregar </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <button id="btnCancelar"> Cancelar </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--botones para ver o borrar de la base-->
+    <div class="p-3 d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-danger" id="btnVer">ver datos</button>
+    </div>
+    <div class="p-3 d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-danger" id="btnBorrar">Borrar de la base</button>
+    </div>
+
+    <!--la tabla para ver la informacion de la base de datos-->
+    <div class="d-flex justify-content-center align-items-center">
+        <div id="anadirTabla" class="p-4 rounded-4 text-secondary shadow container" style="width: 50rem">
+            <h5>Datos ingresado:</h5>
+            <h6>dificultad:</h6>
+            <p id="seleciondif1"></p> <!-- Id debe ser diferente al de otro formulario-->
+            <h6>ingredientes:</h6>
+            <p id="txtIngredientes1"></p>
+            <h6>nombre de la receta:</h6>
+            <p id="txtTitulo1"></p>
+            <h6>Procedimiento:</h6>
+            <p id="txtProceso1"></p>
+            <h6>tiempo:</h6>
+            <p id="txtTiempo1"></p>
+
+            <button type="button" class="btn btn-success" id="btnCerrarDatos">Cerrar</button>
+        </div>
+    </div>
+
+    <!--un formulario para donde se ingresara que dato se desea borrar de la base-->
+    <div class="d-flex justify-content-center align-items-center">
+        <div id="borrarBase" class="p-4 rounded-4 text-secondary shadow container" style="width: 35rem">
+            <h1>¿SEGURO QUE DESEA ELIMINAR UNA NOTA?</h1>
+            <p>Tenga encuenta que si lo borra no podra recuperar la información.</p>
+            <div class="input-group">
+                <span class="input-group-text">Nombre de la receta</span>
+                <input type="text" class="form-control" id="txtIdBorrar">
+                <div class="row gx-5">
+                    <div class="col">
+                        <div class="p-3">
+                            <button id="btnCanBorrador"> Cancelar </button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="p-3">
+                            <button id="bntBorrarBase"> Eliminar </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<!---links de coneccion de firebase-->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<!---js aqui se asen los llamados ala base de datos de firebase-->
+<script src="js/configFirebase.js"></script>
+<script src="js/btnMenus.js"></script>
+<script src="js/notasCocina.js"></script>
+</html>

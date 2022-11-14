@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrarse</title>
+    <!----enlace de boostrap----->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/Registro.css">
+</head>
+<body class="bg-dark d-flex justify-content-center align-items-center vh-100">
+    <div class="bg-white p-4 rounded-4 text-secondary shadow" style="width: 27rem; height: auto;">
+        <div class="d-flex justify-content-center">
+            <img src="img/usuario.png.png" alt="login-icon" style="height: 7rem"/>
+        </div>
+        <div class="text-center fs-1 fw-bold">Registrarse</div>
+        <br>
+
+        <form action="" id="formulario" method="post">
+            <div class="mb-3">
+                <input type="text" class="form-control" id="txtUsuario" name="txtUsuario" placeholder="Nombre de usuario" >
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" id="txtEmail" name="txtEmail" placeholder="Email" >
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" id="txtContrasenia" name="txtContrasenia" placeholder="Contraseña">
+            </div>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <a href="#" class="text-decoration-none text-info fw-semibold fst-italic text-decoration-underline" style="font-size: 0.9rem;">Iniciar sesion</a>
+            </div>
+            <br>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <!--aqui agregamos la funcion guardar de la base en el boton registar-->
+                <button type="button" class="btn btn-outline-primary" type="submit" id="registro">Registrarse</button>
+                <button type="button" class="btn btn-outline-success" id="btnGoogle" onclick="loginGoogle()">Iniciar sesion con Google</button>
+            </div>
+        </form>
+
+        <p class="adevertencia" id="adevertencia"></p>
+    </div>
+
+
+    <!---links de coneccion de firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+    <!--Lo necesario para inicar con google-->
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script>
+
+    <!---js aqui se asen los llamados a la base de datos de firebase-->
+    <script src="js/conexionFirebase.js"></script>
+    <script src="js/configFirebase.js"></script>
+    <script src="js/registro.js"></script>
+</body>
+
+</script>
+</html>

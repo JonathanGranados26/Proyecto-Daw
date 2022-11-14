@@ -1,0 +1,262 @@
+body{
+  background-color: #3E0A4E;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23CC93C7'/%3E%3Cstop offset='1' stop-color='%233E0A4E'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23E4AAFF' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23E4AAFF' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+/* background by SVGBackgrounds.com */
+}
+#tablaParaAnadir{display: none;}
+
+
+#tablaParaAnadir h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+}
+
+#contenido{
+    background-color: #24235896;
+    border-radius: 1rem;
+}
+#contenido h1{
+    transition: all ease-in-out 0.5s;
+    font-family: monospace;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: 3px 2px white;
+}
+#contenido h1:hover{
+    color: white;
+    text-shadow: 3px 2px #0f0f0f;
+    transition: all ease-in-out 0.5s;
+}
+
+/* From uiverse.io by @adamgiebl */
+.cssbuttons-io-button {
+    background: #3B7CCF;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+   }
+   
+   .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+   }
+   
+   .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+   }
+   
+   .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+   }
+   
+   .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+   }
+   
+   .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+   }
+   
+
+/* From uiverse.io by @WhiteNervosa */
+#btnAgregar {
+    font-size: 18px;
+    color: #c88bfa;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  #btnAgregar:focus,
+  #btnAgregar:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  #btnAgregar:focus:after,
+  #btnAgregar:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  #btnAgregar:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+
+#anadirTabla{
+  display: none;
+  color: #0f0f0f !important;
+  font-weight: bolder;
+  background-color: #ddbafa;
+  opacity: 80%;
+}
+
+
+#borrarBase{
+  background-color: rgba(221, 216, 216, 0.534) ;
+  display: none;
+}
+#borrarBase h1{
+  font-size: 1.4rem;
+  color: red !important;
+  text-align: center;
+}
+#borrarBase p{
+  color: #000 !important;
+  text-align: center;
+}
+
+/*botones css
+creditos al autor
+https://uiverse.io/BHARGAVPATEL1244/great-catfish-18
+*/
+
+#btnCerrar {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #66ff66;
+  color: ghostwhite;
+}
+
+#btnCerrar span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+#btnCerrar:hover span {
+  color: black;
+}
+
+#btnCerrar::before,
+#btnCerrar::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#btnCerrar::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+#btnCerrar:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+/*---*/
+#btnBorrarBase {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: #ff6666;
+  color: ghostwhite;
+}
+
+#btnBorrarBase span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+#btnBorrarBase:hover span {
+  color: black;
+}
+
+#btnBorrarBase::before,
+#btnBorrarBase::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#btnBorrarBase::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+#btnBorrarBase:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
